@@ -1,23 +1,68 @@
-<div style="text-align: center; padding: 20px; font-family: sans-serif;">
-    <h2 style="font-size: 24px; font-weight: bold; margin-bottom: 10px;">ライフサポーターオンライン</h2>
-    <p style="font-size: 18px; margin-bottom: 20px;">便利ツール5選はラインから配布しています。</p>
-    
-    <p style="font-weight: bold; margin-bottom: 20px;">以下のライン友だちから登録ください<br>
-    ライフサポーターに入りましたら<br>
-    下部のツールから5個のアプリをご利用ください</p>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ライフサポーターオンライン</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* 基本スタイル */
+        body { font-family: sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
+        .wrap { max-width: 800px; margin: 0 auto; padding: 20px; }
+        
+        /* スマホ向けの拡大設定 (2倍相当) */
+        @media screen and (max-width: 768px) {
+            body { font-size: 32px !important; }
+            h2 { font-size: 48px !important; }
+            .info-text, p { font-size: 32px !important; }
+            
+            /* ボタン・QRエリアの拡大 */
+            .qrcode { transform: scale(1.5); margin: 40px 0 !important; }
+            .addfriend_href img { width: 500px !important; max-width: 90% !important; }
+            
+            /* 体験案内ボタンの拡大 */
+            .btn-large { padding: 40px 80px !important; font-size: 40px !important; }
+        }
 
-    <div class="qrcode" style="display: inline-block; margin: 10px 0;"></div>
+        .center-box { text-align: center; margin: 40px auto; }
+    </style>
+</head>
+<body>
 
-    <div style="margin-top: 10px;">
-        <a href="https://g0qiltvg.autosns.app/line" class="addfriend_href">
-            <img width="300" src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="LINE友だち追加">
-        </a>
+<div class="wrap">
+    <div style="text-align: center; padding: 40px 20px;">
+        <h2 style="font-weight: bold; margin-bottom: 20px;">ライフサポーターオンライン</h2>
+        <p style="margin-bottom: 30px;">便利ツール5選はラインから配布しています。</p>
+        
+        <p style="font-weight: bold; margin-bottom: 30px;">
+            以下のライン友だちから登録ください。<br>
+            ライフサポーターに入りましたら<br>
+            下部のツールから5個のアプリをご利用ください。
+        </p>
+
+        <div class="qrcode" style="display: inline-block; margin: 20px 0;"></div>
+
+        <div style="margin-top: 30px;">
+            <a href="https://g0qiltvg.autosns.app/line" class="addfriend_href">
+                <img width="300" src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="LINE友だち追加">
+            </a>
+        </div>
+    </div>
+
+    <div class="center-box">
+        <p><b>以下は14日会員サイト無料体験版のご案内です。</b></p>
+        <div style="margin: 20px 0;">
+            <a href="https://life-supporter.jp/lp/HRSuykFf" class="btn-large" 
+               style="display: inline-block; padding: 20px 50px; background-color: #007bff; color: #fff; font-weight: bold; text-decoration: none; border-radius: 12px;">
+                無料体験案内を確認する
+            </a>
+        </div>
     </div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://autosns.jp/js/zbp/jquery.qrcode.min.js"></script>
-<script src="https://g0qiltvg.autosns.app/copy-qr/js?height=200&show=1"></script>
+<script src="https://g0qiltvg.autosns.app/copy-qr/js?height=300&show=1"></script>
 
 <script>
     window.addEventListener("load", function() {
@@ -26,22 +71,17 @@
         for(entry of url.searchParams) {
             get_params[entry[0]] = entry[1];
         }
-        get_params['content_element_lp_id'] = "";
-        get_params['scenario_id'] = "";
         get_params['partner_id'] = "A8ildpNc2q";
         
         for(key in get_params) { 
             let span = document.createElement('span');
-            let element_id = `proline-copy-qr-get-params-${key}`;
             span.className = 'proline-copy-qr-get-params';
             span.setAttribute('data-key', key);
             span.setAttribute('data-value', get_params[key]);
-            span.setAttribute('id', element_id);
-            let old_element = document.querySelector(`#${element_id}`);
-            if(old_element) {
-                old_element.remove();
-            }
             document.body.appendChild(span);
         }
     });
 </script>
+
+</body>
+</html>

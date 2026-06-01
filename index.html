@@ -1,215 +1,98 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ライフサポーターオンライン - LINE友だち追加</title>
-    <style>
-        body { font-family: 'Helvetica Neue', Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.8; background-color: #f4f7f6; }
-        
-        /* 全体の横幅を550pxに制限して中央寄せ */
-        .wrap { 
-            max-width: 550px; 
-            margin: 40px auto; 
-            background: #fff; 
-            padding: 40px; 
-            box-sizing: border-box;
-            min-height: 100vh;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-        }
-
-        .banner-container {
-            margin-bottom: 30px;
-            overflow: hidden;
-            border-radius: 8px;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ライフサポーターオンライン</title>
+    <style>
+        body { font-family: sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; background-color: #f9f9f9; }
+        
+        /* 全体の横幅を550pxに制限して中央寄せ */
+        .wrap { 
+            max-width: 550px; 
+            margin: 0 auto; 
+            background: #fff; 
+            padding: 20px; 
+            box-sizing: border-box;
+            min-height: 100vh;
         }
+
+        .content-area { text-align: center; padding: 20px 0; }
+        h2 { font-size: 24px; font-weight: bold; margin-bottom: 15px; }
+        p { font-size: 18px; margin-bottom: 20px; }
+
+        /* QRとボタンのサイズ調整 */
+        .qrcode { margin: 20px auto; }
+        .addfriend_btn { width: 100%; max-width: 300px; display: inline-block; }
+
+        /* --- ここから画像調整用に追加 --- */
         .banner-container img {
-            width: 100%;
-            height: auto;
+            width: 80%; /* ここを調整してください (例: 70%, 90%など) */
             display: block;
+            margin: 0 auto;
         }
-
-        .content-area { text-align: center; }
-        h2 { font-size: 28px; font-weight: bold; margin-bottom: 25px; color: #2c3e50; }
-        .intro-text { font-size: 18px; margin-bottom: 30px; color: #555; }
-
-        /* 追加ツールのスタイル */
-        .new-tools {
-            text-align: left;
-            background-color: #fcfcfc;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 35px;
-            border: 1px solid #eee;
-        }
-        .new-tools h3 {
-            font-size: 20px;
-            margin-top: 0;
-            margin-bottom: 15px;
-            color: #e67e22;
-        }
-        .tool-item {
-            margin-bottom: 15px;
-        }
-        .tool-title {
-            font-weight: bold;
-            color: #333;
-        }
-        .tool-desc {
-            font-size: 16px;
-            color: #666;
-            margin-left: 10px;
-        }
-
-        /* 重要テキストの強調 */
-        .important-instruction { 
-            font-size: 18px;
-            font-weight: bold; 
-            color: #c0392b;
-            background-color: #fdf2f2;
-            padding: 15px;
-            border-radius: 8px;
-            margin-bottom: 30px;
-            border-left: 5px solid #c0392b;
-        }
-
-        /* QRとボタンのサイズ調整 */
-        .qrcode { margin: 30px auto; max-width: 200px; }
-        .addfriend_btn { width: 100%; max-width: 280px; display: inline-block; transition: transform 0.2s; }
-        .addfriend_btn:hover { transform: scale(1.05); }
-
-        /* ツール詳細のスタイル */
-        .tool-detail-list {
-            text-align: left;
-            margin-top: 40px;
-        }
-        .tool-detail-item {
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #eee;
-        }
-        .tool-detail-item:last-child {
-            border-bottom: none;
-        }
-        .tool-num {
-            font-size: 22px;
-            font-weight: bold;
-            color: #27ae60;
-            margin-right: 10px;
-        }
-        .tool-detail-title {
-            font-size: 20px;
-            font-weight: bold;
-            color: #333;
-        }
-        .tool-detail-desc {
-            font-size: 16px;
-            color: #555;
-            margin-top: 10px;
-            margin-left: 35px;
-        }
-        .tool-star {
-            color: #f39c12;
-            font-weight: bold;
-            margin-top: 8px;
-            margin-left: 35px;
-            display: block;
-        }
-
-        .cta-container {
-            margin-top: 40px;
-            padding-top: 30px;
-            border-top: 2px solid #eee;
-        }
-
-    </style>
+        /* -------------------------- */
+    </style>
 </head>
 <body>
 
 <div class="wrap">
-    <div class="banner-container">
-        <img src="https://life-supporter.jp/sp/hxySQ4ff/ct5NJq8Z/images/XS012099.jpg" alt="ライフサポーターオンラインイメージ">
-    </div>
-    
-    <div class="content-area">
-        <h2>ライフサポーターオンライン</h2>
-        <p class="intro-text">便利ツール5選はLINEから配布しています。</p>
+<div class="banner-container">
+    <img src="https://life-supporter.jp/sp/hxySQ4ff/ct5NJq8Z/images/XS012099.jpg">
+  </div>
+    
+    <div class="content-area">
+        <h2>ライフサポーターオンライン</h2>
+        <p>便利ツール5選はラインから配布しています。</p>
 
-        <div class="new-tools">
-            <h3>2つの新しいツールを追加しました</h3>
-            <div class="tool-item">
-                <span class="tool-num">１）</span>
-                <span class="tool-title">「今どこ救Ｒ」</span>
-                <p class="tool-desc">QRコード無料作成。人、子供、物、ペットが行方不明になった時に、見つけてくれた人が指定した人に直接連絡できるシステムです。</p>
-            </div>
-            <div class="tool-item">
-                <span class="tool-num">２）</span>
-                <span class="tool-title">「お元気ですかメール」</span>
-                <p class="tool-desc">単身でも安心な見守りサービス。家族用30日体験版を無料でご利用いただけます。</p>
-            </div>
+        <p>2つのツールを追加しました。</p>
+<p>１）「今どこ救Ｒ」<br>
+    QRコード無料作成、人、子供、物、ペットが行方不明になった時に、見つけてくれた人が指定した人に直接連絡します。
+</p>
+        <p>２）「お元気ですかメール」<br>
+            単身でも安心見守りサービスから３０日体験版（家族用）が無料で利用できます。</p>
+        
+        <p style="font-weight: bold;">
+            以下のライン友だちから登録ください。<br>
+            ライフサポーターに入りましたら<br>
+            下部のメニューのツールから5個のアプリをご利用ください。<br>
+            <br>
+            メニューが開いてない場合は、▲タップしてメニューを表示▲を押してください。
+        </p>
+
+        <div class="qrcode" style="display: inline-block;"></div>
+
+        <div style="margin-top: 20px;">
+            <a href="https://g0qiltvg.autosns.app/line" class="addfriend_href">
+                <img class="addfriend_btn" src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="LINE友だち追加">
+            </a>
+<p>1）相続や医療のヒントをサポート<br>
+150以上のヒントを検索機能で簡単に調査可能。相続、医療、介護に関する情報を素早くゲット！<br>
+★「知らない」はリスク 「知る」はギフト。<br>
+これからを整える未来へのヒント</p>
+<br>
+<p>2）毎日のリフレッシュ体操<br>
+AIが簡単な体操の指示を提供。一人でも楽しめますし、大勢での実施も可能です。心も体もスッキリ！<br>
+★このゲームは、体操をしながら楽しめるレクリエーションゲームです。簡単な体操を15個用意しました。</p>
+<br>
+<p>3）マイライフチェック<br>
+60項目の詳細なチェックリストとメモ帳を用意。（各項目解説文８００文字付）各章に10項目のカテゴリがあります。お金や介護、健康管理についてしっかりと見つめ直せます。<br>
+★これからの人生をどう彩るかという設計図です</p>
+<br>
+<p>4）運勢を日々鑑定<br>
+毎日1回、4つの扉から運勢を占えます。気になる未来を少しでも明るくしませんか？<br>
+★全体運、仕事・学業運、対人運、ラッキーカラー、ラッキーフード、アクション、重要ポイント</p>
+<br>
+<p>5）楽しいひらがな並び替えゲーム<br>
+脳トレにぴったりのゲーム。気軽に楽しめるので、忙しい合間にも遊んでみてください。<br>
+★４語前後のバラバラにしたひらがなが沢山出ます。簡単な問題ばかりですがお楽しみください。</p>
+<br>  
+ <div style="margin-top: 20px;">
+            <a href="https://g0qiltvg.autosns.app/line" class="addfriend_href">
+                <img class="addfriend_btn" src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="LINE友だち追加">
+            </a>            
         </div>
-        
-        <div class="important-instruction">
-            以下のLINE友だち追加ボタンから登録ください。<br>
-            登録後、下部メニューの「ツール」から<br>
-            5個のアプリをご利用いただけます。<br>
-            <br>
-            メニューが表示されていない場合は、<br>
-            <span style="color: #2c3e50; background-color: #ecf0f1; padding: 2px 5px; border-radius: 3px;">▲タップしてメニューを表示▲</span>を押してください。
-        </div>
-
-        <div class="qrcode" style="display: inline-block;"></div>
-
-        <div style="margin-top: 20px; margin-bottom: 40px;">
-            <a href="https://g0qiltvg.autosns.app/line" class="addfriend_href">
-                <img class="addfriend_btn" src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="LINE友だち追加">
-            </a>
-        </div>
-
-        <div class="tool-detail-list">
-            <div class="tool-detail-item">
-                <span class="tool-num">1</span>
-                <span class="tool-detail-title">相続や医療のヒントをサポート</span>
-                <p class="tool-detail-desc">150以上のヒントを検索機能で簡単に調査可能。相続、医療、介護に関する情報を素早くゲット！</p>
-                <span class="tool-star">★「知らない」はリスク 「知る」はギフト。<br>これからを整える未来へのヒント</span>
-            </div>
-
-            <div class="tool-detail-item">
-                <span class="tool-num">2</span>
-                <span class="tool-detail-title">毎日のリフレッシュ体操</span>
-                <p class="tool-detail-desc">AIが簡単な体操の指示を提供。一人でも大勢でも楽しめます。心も体もスッキリ！</p>
-                <span class="tool-star">★このゲームは、体操をしながら楽しめるレクリエーションゲームです。簡単な体操を15個用意しました。</span>
-            </div>
-
-            <div class="tool-detail-item">
-                <span class="tool-num">3</span>
-                <span class="tool-detail-title">マイライフチェック</span>
-                <p class="tool-detail-desc">60項目の詳細なチェックリストとメモ帳を用意（各項目解説文800文字付）。お金や介護、健康管理についてしっかりと見つめ直せます。</p>
-                <span class="tool-star">★これからの人生をどう彩るかという設計図です</span>
-            </div>
-
-            <div class="tool-detail-item">
-                <span class="tool-num">4</span>
-                <span class="tool-detail-title">運勢を日々鑑定</span>
-                <p class="tool-detail-desc">毎日1回、4つの扉から運勢を占えます。気になる未来を少しでも明るくしませんか？</p>
-                <span class="tool-star">★全体運、仕事・学業運、対人運、ラッキーカラー、ラッキーフード、アクション、重要ポイント</span>
-            </div>
-
-            <div class="tool-detail-item">
-                <span class="tool-num">5</span>
-                <span class="tool-detail-title">楽しいひらがな並び替えゲーム</span>
-                <p class="tool-detail-desc">脳トレにぴったりのゲーム。気軽に楽しめるので、忙しい合間にも遊んでみてください。</p>
-                <span class="tool-star">★4語前後のバラバラにしたひらがなが沢山出ます。簡単な問題ばかりですがお楽しみください。</span>
-            </div>
-        </div>
-
-        <div class="cta-container">
-            <a href="https://g0qiltvg.autosns.app/line" class="addfriend_href">
-                <img class="addfriend_btn" src="https://scdn.line-apps.com/n/line_add_friends/btn/ja.png" alt="LINE友だち追加">
-            </a>            
-        </div>
-    </div>
+    </div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -217,19 +100,19 @@
 <script src="https://g0qiltvg.autosns.app/copy-qr/js?height=200&show=1"></script>
 
 <script>
-    window.addEventListener("load", function() {
-        let url = new URL(window.location.href);
-        let get_params = {};
-        for(entry of url.searchParams) { get_params[entry[0]] = entry[1]; }
-        get_params['partner_id'] = "A8ildpNc2q";
-        for(key in get_params) { 
-            let span = document.createElement('span');
-            span.className = 'proline-copy-qr-get-params';
-            span.setAttribute('data-key', key);
-            span.setAttribute('data-value', get_params[key]);
-            document.body.appendChild(span);
-        }
-    });
+    window.addEventListener("load", function() {
+        let url = new URL(window.location.href);
+        let get_params = {};
+        for(entry of url.searchParams) { get_params[entry[0]] = entry[1]; }
+        get_params['partner_id'] = "A8ildpNc2q";
+        for(key in get_params) { 
+            let span = document.createElement('span');
+            span.className = 'proline-copy-qr-get-params';
+            span.setAttribute('data-key', key);
+            span.setAttribute('data-value', get_params[key]);
+            document.body.appendChild(span);
+        }
+    });
 </script>
 
 </body>
